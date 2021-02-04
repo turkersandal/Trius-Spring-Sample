@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e6933496-0e6f-41db-bf1a-f87ff2cd4aed" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/trius/springframework/commands/dto/AddProductToBasket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/trius/springframework/controllers/base/BaseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/trius/springframework/domain/Basket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/trius/springframework/domain/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/trius/springframework/repositories/BasketRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/trius/springframework/repositories/OrderRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/trius/springframework/rest/BasketRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/trius/springframework/services/BasketService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/trius/springframework/services/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/trius/springframework/services/UserAccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/trius/springframework/services/impl/BasketServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/trius/springframework/services/impl/OrderServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/trius/springframework/services/impl/UserAccountServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/order/order-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/trius/springframework/commands/ProductForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/trius/springframework/commands/ProductForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/trius/springframework/controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/trius/springframework/controllers/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/trius/springframework/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/trius/springframework/controllers/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/trius/springframework/converters/ProductFormToProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/trius/springframework/converters/product/ProductFormToProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/trius/springframework/converters/ProductToProductForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/trius/springframework/converters/product/ProductToProductForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/trius/springframework/domain/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/trius/springframework/domain/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/trius/springframework/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/trius/springframework/repositories/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/trius/springframework/security/ApplicationSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/trius/springframework/security/ApplicationSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/trius/springframework/security/ApplicationUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/trius/springframework/security/ApplicationUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/trius/springframework/security/InitializeUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/trius/springframework/security/InitializeUsers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/trius/springframework/services/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/trius/springframework/services/impl/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/product/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/product/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/product/productform.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/product/productform.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/product/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/product/show.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/product/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/product/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/product/productform.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/product/productform.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/product/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/product/show.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/trius/springframework/SpringBootMongodbApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/trius/springframework/SpringBootMongodbApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/trius/springframework/commands/ProductForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/trius/springframework/commands/ProductForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/trius/springframework/controllers/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/trius/springframework/controllers/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/trius/springframework/controllers/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/trius/springframework/controllers/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/trius/springframework/converters/ProductFormToProduct.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/trius/springframework/converters/ProductToProductForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/trius/springframework/domain/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/trius/springframework/domain/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/trius/springframework/repositories/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/trius/springframework/repositories/ProductRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/trius/springframework/repositories/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/trius/springframework/repositories/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/trius/springframework/security/ApplicationAuthenticationManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/trius/springframework/security/ApplicationAuthenticationManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/trius/springframework/security/ApplicationSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/trius/springframework/security/ApplicationSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/trius/springframework/security/ApplicationUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/trius/springframework/security/ApplicationUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/trius/springframework/security/ApplicationUserDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/trius/springframework/security/ApplicationUserDetailsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/trius/springframework/security/InitializeUsers.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/trius/springframework/security/InitializeUsers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/trius/springframework/security/UserAccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/trius/springframework/security/UserAccount.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/trius/springframework/services/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/trius/springframework/services/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/trius/springframework/services/ProductServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/trius/springframework/SpringBootMongodbApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/trius/springframework/SpringBootMongodbApplicationTests.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1hzP0i0nsalGSDHiPEm87edXKmM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/product" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/templates/product" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="SpringBootMongodbApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-mongodb" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="trius.springframework.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="trius.springframework.SpringBootMongodbApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.SpringBootMongodbApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <option name="contentProportion" value="0.19603825" />
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@5b5b675" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@5b5b675" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@eba8e624" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e6933496-0e6f-41db-bf1a-f87ff2cd4aed" name="Default Changelist" comment="" />
+      <created>1601010727004</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601010727004</updated>
+      <workItem from="1601010729522" duration="51000" />
+      <workItem from="1601012697848" duration="24000" />
+      <workItem from="1601012739882" duration="1225000" />
+      <workItem from="1601030071192" duration="610000" />
+      <workItem from="1601051292504" duration="3504000" />
+      <workItem from="1612020488007" duration="2001000" />
+      <workItem from="1612028267615" duration="2719000" />
+      <workItem from="1612031006886" duration="188000" />
+      <workItem from="1612031234059" duration="137000" />
+      <workItem from="1612075921769" duration="5591000" />
+      <workItem from="1612094957539" duration="276000" />
+      <workItem from="1612095278472" duration="223000" />
+      <workItem from="1612126807767" duration="800000" />
+      <workItem from="1612127893075" duration="1155000" />
+      <workItem from="1612129778475" duration="654000" />
+      <workItem from="1612159506237" duration="5117000" />
+      <workItem from="1612164669445" duration="1350000" />
+      <workItem from="1612263142649" duration="7269000" />
+      <workItem from="1612419501934" duration="14437000" />
+      <workItem from="1612441465078" duration="1298000" />
+      <workItem from="1612442789069" duration="638000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

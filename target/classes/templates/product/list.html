@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Trius Online Tutorial - List Products</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+            integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+            crossorigin="anonymous"></script>
+
+
+</head>
+<style>
+    .modal-backdrop{
+        background-color: rgba(0,0,0,.0001) !important;
+    }
+</style>
+<body>
+<div class="container">
+
+    <div class="modal" tabindex="-1" role="dialog" id="confirm-modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sipariş Onayı</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="false">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Ürünü sepete eklemek istiyor musunuz?</p>
+                </div>
+                <div class="modal-footer">
+                    <button onclick="addBasket()" data-dismiss="modal" value="" class="btn btn-danger" id="confirmRef">Evet</button>
+                    <button type="button"  class="btn btn-secondary" data-dismiss="modal">İptal</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" role="dialog" id="basket-modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sepet</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="false">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table id="basket-table">
+                    </table>
+                </div>
+
+                <div class="modal-footer">
+                    <form style="float: left" th:action="@{/order/{id} (id=${userid})}" method="post">
+                        <input style="width: 200px; alignment: center;" class="btn btn-success"
+                               value="Sepeti Onayla" type="submit"/>
+                    </form>
+                    <input type="submit" class="btn btn-danger" data-dismiss="modal" value="İptal"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <form style="float: left" th:action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+        <form style="float: left" th:action="@{/order-list}" method="get">
+            <input type="submit" value="Order List"/>
+        </form>
+        <input id="basket" style="float: right" type="submit" value="Basket"/>
+    </div>
+    <br>
+    <div th:if="${not #lists.isEmpty(products)}">
+        <h2>Product List</h2>
+        <table class="table table-striped" id="product-table">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>List</th>
+                <th>Order</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            <tr th:each="product : ${products}">
+                <td th:text="${product.id.toHexString()}"></td>
+                <td th:text="${product.name}"></td>
+                <td th:text="${product.description}"></td>
+                <td th:text="${product.price}"></td>
+                <td th:text="${product.stock}"></td>
+                <td><a th:href="${'/product/show/' + product.id.toHexString()}">View</a> </td>
+                <td><a id="order"  th:value="${product.id.toHexString()}">Order</a></td>
+                <td><a th:href="${'/product/edit/' + product.id.toHexString()}">Edit</a> </td>
+                <td><a th:href="${'/product/delete/' + product.id.toHexString()}">Delete</a> </td>
+            </tr>
+        </table>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <a href="/product/new">New Product</a>
+        </div>
+    </div>
+</div>
+
+</body>
+
+<script th:inline="javascript">
+    uId = [[${userid}]]
+    message =  [[${message}]]
+
+    if(message != null)
+        alert(message)
+
+    //ON CLICK ORDER
+    $('#product-table #order').on('click',function(event){
+        event.preventDefault();
+        var href = $(this).attr('value');
+        $('#confirm-modal #confirmRef').attr('value',href);
+        window.$('#confirm-modal').modal();
+    })
+
+    //ADD ITEM TO BASKET POST REQUEST
+    addBasket = function (){
+        var pId = $('#confirm-modal #confirmRef').attr('value');
+        var basketItem = {"user_email":uId,"product_id":pId}
+        $.ajax({
+            type: "POST",
+            url: "http://localhost:8080/api/basket/",
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(basketItem),
+            success: function (data){
+                alert("Ürün sepete eklendi...")
+                console.log(data)
+            },
+            dataType: "json",
+            error:function (data){
+                alert(data.responseText)
+            }
+        });
+
+    }
+
+    //ON CLICK BASKET
+     $('#basket').on('click',function(event){
+        event.preventDefault();
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:8080/api/basket/"+uId,
+            contentType: "application/json; charset=utf-8",
+            success: function (data){
+                var list = data.productList
+                console.log(list)
+                var table = $('<table>').addClass('foo');
+
+                $.each(list, function(i, item) {
+                    var row = $('<tr>').addClass('bar').text(list[i].name +" "+list[i].description +" "+list[i].price );
+                    table.append(row);
+                    table.append('<hr>')
+                })
+
+                $('#basket-table').html(table);
+            },
+            dataType: "json",
+            error:function (data){
+                alert(data.responseText)
+            }
+        });
+        window.$('#basket-modal').modal();
+    })
+</script>
+
+</html>
