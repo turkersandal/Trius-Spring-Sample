@@ -12,7 +12,7 @@ import java.math.BigDecimal;
 @Document(collection = "product")
 public class Product {
     @Id
-    private ObjectId _id;
+    private ObjectId id;
     private String name;
     private String description;
     private BigDecimal price;
@@ -29,11 +29,11 @@ public class Product {
     }
 
     public ObjectId getId() {
-        return _id;
+        return id;
     }
 
     public void setId(ObjectId id) {
-        this._id = id;
+        this.id = id;
     }
 
     public String getDescription() {
@@ -61,11 +61,11 @@ public class Product {
     }
 
     public ObjectId get_id() {
-        return _id;
+        return id;
     }
 
     public void set_id(ObjectId _id) {
-        this._id = _id;
+        this.id = _id;
     }
 
     public String getName() {

@@ -44,7 +44,6 @@ public class InitializeUsers {
         //userRepository.save(new UserAccount("turker@gmail.com", passwordEncoder.encode("123456")));
         //Basket basket = new Basket(userRepository.findByEmail("turker@gmail.com"),new ArrayList<Product>());
         //basketService.save(basket);
-
     }
 
 }

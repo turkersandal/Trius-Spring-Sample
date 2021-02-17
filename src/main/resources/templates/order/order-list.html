@@ -25,11 +25,13 @@
             <tr>
                 <th>Id</th>
                 <th>User</th>
+                <th>Date</th>
                 <th>Product List</th>
             </tr>
             <tr th:each="order : ${orderList}">
                 <td th:text="${order.orderId}"></td>
                 <td th:text="${order.userAccount.email}"></td>
+                <td th:text="${T(trius.springframework.utils.DateUtil).dateToString(order.orderDate,'dd.MM.yyyy HH:mm')}"></td>
                 <td>
                     <select class="form-control">
                         <option th:each="product : ${order.productList}" th:text="${product.name+' - $ '+product.price}" ></option>
